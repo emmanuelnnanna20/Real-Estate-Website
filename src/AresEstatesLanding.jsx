@@ -56,10 +56,10 @@ export default function AresEstatesLanding() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-lg py-4' : 'bg-transparent py-6'}`}>
+      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-lg py-4' : 'bg-purple-700 py-6'}`}>
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-purple-700 rounded-lg flex items-center justify-center">
               <Home className="w-6 h-6 text-white" />
             </div>
             <span className={`text-2xl font-bold transition-colors ${scrolled ? 'text-gray-900' : 'text-white'}`}>
@@ -68,17 +68,17 @@ export default function AresEstatesLanding() {
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#properties" className={`transition-colors ${scrolled ? 'text-gray-700 hover:text-purple-600' : 'text-white hover:text-purple-200'}`}>Properties</a>
-            <a href="#about" className={`transition-colors ${scrolled ? 'text-gray-700 hover:text-purple-600' : 'text-white hover:text-purple-200'}`}>About Us</a>
-            <a href="#services" className={`transition-colors ${scrolled ? 'text-gray-700 hover:text-purple-600' : 'text-white hover:text-purple-200'}`}>Services</a>
-            <a href="#contact" className={`transition-colors ${scrolled ? 'text-gray-700 hover:text-purple-600' : 'text-white hover:text-purple-200'}`}>Contact</a>
+            <a href="#properties" className={`transition-colors ${scrolled ? 'text-gray-700 hover:text-purple-700' : 'text-white hover:text-purple-200'}`}>Properties</a>
+            <a href="#about" className={`transition-colors ${scrolled ? 'text-gray-700 hover:text-purple-700' : 'text-white hover:text-purple-200'}`}>About Us</a>
+            <a href="#services" className={`transition-colors ${scrolled ? 'text-gray-700 hover:text-purple-700' : 'text-white hover:text-purple-200'}`}>Services</a>
+            <a href="#contact" className={`transition-colors ${scrolled ? 'text-gray-700 hover:text-purple-700' : 'text-white hover:text-purple-200'}`}>Contact</a>
           </div>
 
           <div className="flex items-center space-x-4">
             <button className={`hidden md:block transition-colors ${scrolled ? 'text-gray-700' : 'text-white'}`}>
               Sign In
             </button>
-            <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+            <button className="bg-purple-700 text-white px-6 py-2 rounded-full hover:bg-purple-800 transition-all duration-300 transform hover:scale-105">
               Get Started
             </button>
           </div>
@@ -86,23 +86,16 @@ export default function AresEstatesLanding() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative h-screen overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-700 via-purple-600 to-blue-600">
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-20 left-20 w-96 h-96 bg-pink-400 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-            <div className="absolute top-40 right-20 w-96 h-96 bg-yellow-400 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
-            <div className="absolute bottom-20 left-1/2 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
-          </div>
-        </div>
-
+      <section className="relative h-screen overflow-hidden bg-purple-700">
+        {/* Removed all gradient & blob overlays */}
         <div className="relative max-w-7xl mx-auto px-6 h-full flex items-center">
           <div className="max-w-3xl">
             <div className="mb-6 inline-block bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-white text-sm">
-              🏆 Nigeria's Most Trusted Real Estate Partner
+              Nigeria's Most Trusted Real Estate Partner
             </div>
             <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Find Your
-              <span className="block bg-gradient-to-r from-pink-300 to-yellow-300 bg-clip-text text-transparent">
+              <span className="block text-yellow-300">
                 Dream Home
               </span>
               in Nigeria
@@ -121,7 +114,7 @@ export default function AresEstatesLanding() {
                   className="flex-1 py-4 outline-none text-gray-800"
                 />
               </div>
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center space-x-2">
+              <button className="bg-purple-700 text-white px-8 py-4 rounded-xl hover:bg-purple-800 transition-all duration-300 transform hover:scale-105 flex items-center space-x-2">
                 <span>Search</span>
                 <ChevronRight className="w-5 h-5" />
               </button>
@@ -137,7 +130,7 @@ export default function AresEstatesLanding() {
                   alt="Featured Property"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute top-4 right-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                <div className="absolute top-4 right-4 bg-purple-700 text-white px-4 py-2 rounded-full text-sm font-semibold">
                   Featured
                 </div>
               </div>
@@ -147,8 +140,8 @@ export default function AresEstatesLanding() {
                 Banana Island, Lagos
               </p>
               <div className="flex justify-between items-center">
-                <span className="text-2xl font-bold text-purple-600">₦250M</span>
-                <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">
+                <span className="text-2xl font-bold text-purple-700">₦250M</span>
+                <button className="bg-purple-700 text-white px-4 py-2 rounded-lg hover:bg-purple-800 transition">
                   View Details
                 </button>
               </div>
@@ -165,12 +158,12 @@ export default function AresEstatesLanding() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center transform hover:scale-110 transition-all duration-300">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl mb-4">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-700 rounded-2xl mb-4">
                   <stat.icon className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-4xl font-bold text-gray-900 mb-2">{stat.value}</div>
@@ -186,7 +179,7 @@ export default function AresEstatesLanding() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-gray-900 mb-4">
-              Featured <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Properties</span>
+              Featured <span className="text-purple-700">Properties</span>
             </h2>
             <p className="text-xl text-gray-600">Handpicked luxury homes for discerning buyers</p>
           </div>
@@ -204,7 +197,7 @@ export default function AresEstatesLanding() {
                     alt={property.title}
                     className="w-full h-full object-cover transform hover:scale-110 transition-all duration-500"
                   />
-                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold text-purple-600">
+                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold text-purple-700">
                     For Sale
                   </div>
                 </div>
@@ -222,8 +215,8 @@ export default function AresEstatesLanding() {
                     <span>{property.sqft}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-3xl font-bold text-purple-600">{property.price}</span>
-                    <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-xl hover:shadow-lg transition-all duration-300 flex items-center space-x-2">
+                    <span className="text-3xl font-bold text-purple-700">{property.price}</span>
+                    <button className="bg-purple-700 text-white px-6 py-3 rounded-xl hover:bg-purple-800 transition-all duration-300 flex items-center space-x-2">
                       <span>View</span>
                       <ChevronRight className="w-4 h-4" />
                     </button>
@@ -234,7 +227,7 @@ export default function AresEstatesLanding() {
           </div>
 
           <div className="text-center mt-12">
-            <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-lg font-semibold">
+            <button className="bg-purple-700 text-white px-8 py-4 rounded-full hover:bg-purple-800 transition-all duration-300 transform hover:scale-105 text-lg font-semibold">
               View All Properties
             </button>
           </div>
@@ -242,23 +235,18 @@ export default function AresEstatesLanding() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-700 via-purple-600 to-blue-600 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-pink-400 rounded-full mix-blend-multiply filter blur-3xl"></div>
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-yellow-400 rounded-full mix-blend-multiply filter blur-3xl"></div>
-        </div>
-        
+      <section className="py-20 bg-purple-700 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
           <h2 className="text-5xl font-bold text-white mb-6">Ready to Find Your Dream Home?</h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Join thousands of satisfied homeowners who found their perfect property with Ares Estates
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-full hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-lg font-semibold flex items-center space-x-2">
+            <button className="bg-white text-purple-700 px-700 px-8 py-4 rounded-full hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-lg font-semibold flex items-center space-x-2">
               <Phone className="w-5 h-5" />
               <span>Call Us Now</span>
             </button>
-            <button className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105 text-lg font-semibold flex items-center space-x-2">
+            <button className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full hover:bg-white hover:text-purple-700 transition-all duration-300 transform hover:scale-105 text-lg font-semibold flex items-center space-x-2">
               <Mail className="w-5 h-5" />
               <span>Schedule Viewing</span>
             </button>
@@ -272,13 +260,14 @@ export default function AresEstatesLanding() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 bg-purple-700 rounded-lg flex items-center justify-center">
                   <Home className="w-6 h-6 text-white" />
                 </div>
                 <span className="text-2xl font-bold">Ares Estates</span>
               </div>
               <p className="text-gray-400">Nigeria's premier real estate destination for luxury living.</p>
             </div>
+            {/* ... rest of footer unchanged ... */}
             <div>
               <h4 className="font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2 text-gray-400">
